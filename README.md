@@ -12,28 +12,28 @@ npm install eslint-plugin-max-tokens --save-dev
 
 ## Usage
 
-To use the plugin, you need to add it to your ESLint configuration file (e.g., `.eslintrc.json`) and enable the `max-token/max-tokens` rule:
+To use the plugin, you need to add it to your ESLint configuration file (e.g., `.eslintrc.json`) and enable the `max-tokens/max-tokens` rule:
 
 ```json
 {
-  "plugins": ["max-token"],
+  "plugins": ["max-tokens"],
   "rules": {
-    "max-token/max-tokens": ["warn", { "maxTokenLength": 8192 }]
+    "max-tokens/max-tokens": ["warn", { "maxTokenLength": 8192 }]
   }
 }
 ```
 
-In the above example, the `max-token/max-tokens` rule is set to `"warn"`, and the `maxTokenLength` option is set to `8192`. You can adjust the `maxTokenLength` value according to your project's requirements.
+In the above example, the `max-tokens/max-tokens` rule is set to `"warn"`, and the `maxTokenLength` option is set to `8192`. You can adjust the `maxTokenLength` value according to your project's requirements.
 
 ## Rule Details
 
-The `max-token/max-tokens` rule enforces a maximum token length for each file in your project. It uses the `gpt-tokenizer` library to tokenize the source code and counts the number of tokens.
+The `max-tokens/max-tokens` rule enforces a maximum token length for each file in your project. It uses the `gpt-tokenizer` library to tokenize the source code and counts the number of tokens.
 
 If the token length of a file exceeds the specified `maxTokenLength`, the rule will report a warning or error (depending on the rule configuration).
 
 ### Options
 
-The `max-token/max-tokens` rule accepts an optional options object with the following property:
+The `max-tokens/max-tokens` rule accepts an optional options object with the following property:
 
 - `maxTokenLength` (number): The maximum allowed token length for a file. Default value is `4096`.
 
@@ -41,14 +41,14 @@ The `max-token/max-tokens` rule accepts an optional options object with the foll
 
 ```json
 {
-  "plugins": ["max-token"],
+  "plugins": ["max-tokens"],
   "rules": {
-    "max-token/max-tokens": ["error", { "maxTokenLength": 10000 }]
+    "max-tokens/max-tokens": ["error", { "maxTokenLength": 10000 }]
   }
 }
 ```
 
-In this example, the `max-token/max-tokens` rule is set to `"error"`, and the `maxTokenLength` option is set to `10000`. Files exceeding 10,000 tokens will trigger an error.
+In this example, the `max-tokens/max-tokens` rule is set to `"error"`, and the `maxTokenLength` option is set to `10000`. Files exceeding 10,000 tokens will trigger an error.
 
 ## License
 

@@ -1,13 +1,17 @@
 {
   "name": "eslint-plugin-max-tokens",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "enforces max token for file",
   "keywords": [
     "eslint",
     "eslintplugin",
     "eslint-plugin"
   ],
-  "author": "Mat",
+  "author": "Mathieu Gosbee",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/matbee-eth/eslint-plugin-max-tokens"
+  },
   "main": "./lib/index.js",
   "exports": "./lib/index.js",
   "scripts": {
@@ -34,5 +38,5 @@
   "peerDependencies": {
     "eslint": ">=7"
   },
-  "license": "ISC"
+  "license": "MIT"
 }
